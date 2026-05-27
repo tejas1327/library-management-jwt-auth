@@ -21,7 +21,7 @@ public class IssuedRecordController {
 		this.issuedRecordService = issuedRecordService;
 	}
 
-	@PostMapping("issuethebook/{bookid}")
+	@PostMapping("issuethebook/{bookId}")
 	public ResponseEntity<IssuedBook> issueTheBook(@PathVariable Long bookId) {
 		return new ResponseEntity<IssuedBook>(issuedRecordService.issueTheBook(bookId), HttpStatus.CREATED);
 	}
